@@ -1,0 +1,11 @@
+.item-chat {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  .avatar {
+    width: 60px;
+    height: 60px;
+    .image {
+      object-fit: cover;
+    }
+  }
+}

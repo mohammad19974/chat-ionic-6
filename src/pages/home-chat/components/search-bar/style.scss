@@ -1,0 +1,19 @@
+.search-bar {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  /*   padding-right: 13px;
+ */
+  .chap-bar {
+    background: rgba(0, 0, 0, 0.05);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.014);
+    padding: 10px;
+
+    border-radius: 10px;
+    width: 100%;
+    .icon-search {
+      position: relative;
+      top: 2px;
+      padding-right: 5px;
+    }
+  }
+}
