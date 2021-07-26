@@ -12,10 +12,7 @@ import {
 import { IonReactRouter } from "@ionic/react-router";
 import {
   chatbubblesSharp,
-  ellipse,
   peopleSharp,
-  square,
-  triangle,
 } from "ionicons/icons";
 import Tab1 from "./pages/Tab1";
 import Tab2 from "./pages/Tab2";
@@ -39,6 +36,7 @@ import "@ionic/react/css/display.css";
 /* Theme variables */
 import "./theme/variables.css";
 import HomeChat from "./pages/home-chat";
+import People from "./pages/people";
 
 const App: React.FC = () => (
   <IonApp>
@@ -49,7 +47,7 @@ const App: React.FC = () => (
             <HomeChat />
           </Route>
           <Route exact path="/tab2">
-            <Tab2 />
+            <People />
           </Route>
           <Route path="/tab3">
             <Tab3 />

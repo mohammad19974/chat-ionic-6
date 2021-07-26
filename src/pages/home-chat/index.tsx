@@ -6,7 +6,7 @@ import { SliderStories } from "../../components/slider-stories";
 import { HeaderMainPage } from "../../layout/header-main-page";
 import { itemChat } from "../../views/item-chat";
 import { StoriesList } from "../../views/stories";
-import { SearchBar } from "./components/search-bar";
+import { SearchBar } from "../../components/search-bar";
 const HomeChat: React.FC = () => {
   return (
     <IonPage>
