@@ -2,8 +2,10 @@ import { IonChip, IonContent, IonList, IonPage } from "@ionic/react";
 
 import React from "react";
 import { ItemChat } from "../../components/item-chat";
+import { SliderStories } from "../../components/slider-stories";
 import { HeaderMainPage } from "../../layout/header-main-page";
 import { itemChat } from "../../views/item-chat";
+import { StoriesList } from "../../views/stories";
 import { SearchBar } from "./components/search-bar";
 const HomeChat: React.FC = () => {
   return (
@@ -11,6 +13,7 @@ const HomeChat: React.FC = () => {
       <HeaderMainPage title="Chats" />
       <IonContent>
         <SearchBar />
+        <SliderStories listStories={StoriesList} />
         <IonList>
           {itemChat.map((data, index) => {
             return (
