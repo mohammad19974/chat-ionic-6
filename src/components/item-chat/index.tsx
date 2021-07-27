@@ -11,6 +11,7 @@ export const ItemChat: React.FC<ItemChatProps> = React.memo(
   ({ name, subTitle, imageProfile, state, lines, button, detail }) => {
     return (
       <IonItem
+        routerLink={"/chat-room/5"}
         detail={detail && detail}
         button={button && button}
         lines={lines && lines}

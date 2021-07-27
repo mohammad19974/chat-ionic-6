@@ -3,9 +3,6 @@ import React from 'react'
 import { ItemPeopleProps } from './props'
 import './style.scss'
 export const ItemPeople: React.FC<ItemPeopleProps> = React.memo(({name,pathImage,isActive}) => {
-    
-
-
     return (<IonItem button detail={false} className={"item-people"}>
         <IonAvatar className="avtar" slot="start">
             <img src={pathImage}/>
@@ -14,6 +11,6 @@ export const ItemPeople: React.FC<ItemPeopleProps> = React.memo(({name,pathImage
            {name}
         </IonLabel>
         
-        <img src={process.env.PUBLIC_URL+"/assets/svg/Oval.svg"} />
+       {isActive&&<img  slot="end" src={process.env.PUBLIC_URL+"/assets/svg/Oval.svg"} />} 
     </IonItem>)
 })

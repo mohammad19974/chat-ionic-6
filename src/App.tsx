@@ -4,6 +4,7 @@ import {
   IonBadge,
   IonIcon,
   IonLabel,
+  IonRoute,
   IonRouterOutlet,
   IonTabBar,
   IonTabButton,
@@ -37,38 +38,16 @@ import "@ionic/react/css/display.css";
 import "./theme/variables.css";
 import HomeChat from "./pages/home-chat";
 import People from "./pages/people";
+import ChatRoom from "./pages/chat-room";
+import Tabs from "./routes/tabs";
 
 const App: React.FC = () => (
   <IonApp>
     <IonReactRouter>
-      <IonTabs>
-        <IonRouterOutlet>
-          <Route exact path="/tab1">
-            <HomeChat />
-          </Route>
-          <Route exact path="/tab2">
-            <People />
-          </Route>
-          <Route path="/tab3">
-            <Tab3 />
-          </Route>
-          <Route exact path="/">
-            <Redirect to="/tab1" />
-          </Route>
+      <IonRouterOutlet>
+        <Route   path="/chat-room/:id" exact component={ChatRoom} ></Route>
+    <Route component={Tabs} path="/tab"></Route>
         </IonRouterOutlet>
-        <IonTabBar slot="bottom">
-          <IonTabButton tab="tab1" href="/tab1">
-            <IonIcon icon={chatbubblesSharp} />
-            <IonLabel>Chat</IonLabel>
-            <IonBadge color="danger">4</IonBadge>
-          </IonTabButton>
-          <IonTabButton tab="tab2" href="/tab2">
-            <IonIcon icon={peopleSharp} />
-
-            <IonLabel>People</IonLabel>
-          </IonTabButton>
-        </IonTabBar>
-      </IonTabs>
     </IonReactRouter>
   </IonApp>
 );
