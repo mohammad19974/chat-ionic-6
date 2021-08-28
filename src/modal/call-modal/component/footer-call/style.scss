@@ -1,0 +1,15 @@
+#footer-call {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  top: 65%;
+
+  .footer {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    .btn {
+      margin-inline: 5px;
+    }
+  }
+}

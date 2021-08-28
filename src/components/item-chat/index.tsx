@@ -21,8 +21,8 @@ export const ItemChat: React.FC<ItemChatProps> = React.memo(
           <img className="image" src={imageProfile} />
         </IonAvatar>
         <IonLabel>
-          <h1>{name}</h1>
-          {subTitle && <p>{subTitle}</p>}
+          <h1 className="title">{name}</h1>
+          {subTitle && <p className="sub-title">{subTitle}</p>}
         </IonLabel>
         <IonIcon
           color={state == "insend" ? "light" : "primary"}

@@ -1,3 +1,5 @@
+import { call, cameraSharp, videocam } from "ionicons/icons";
+
 export const itemChat = [
   {
     name: "mohammad jamel",
@@ -27,4 +29,18 @@ export const itemChat = [
       "https://images.unsplash.com/photo-1542353436-312f0e1f67ff?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8am95fGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80",
     state: "send",
   },
+];
+
+export const SLIDER_ITEM_OPTION = [
+  {
+    icon: cameraSharp,
+    color: "light",
+    background: "#0084FE",
+  },
+  {
+    icon: call,
+    color: "primary",
+    background: "#f9f9f9",
+  },
+  { icon: videocam, color: "primary", background: "#f9f9f9" },
 ];

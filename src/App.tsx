@@ -11,10 +11,7 @@ import {
   IonTabs,
 } from "@ionic/react";
 import { IonReactRouter } from "@ionic/react-router";
-import {
-  chatbubblesSharp,
-  peopleSharp,
-} from "ionicons/icons";
+import { chatbubblesSharp, peopleSharp } from "ionicons/icons";
 import Tab1 from "./pages/Tab1";
 import Tab2 from "./pages/Tab2";
 import Tab3 from "./pages/Tab3";
@@ -40,14 +37,16 @@ import HomeChat from "./pages/home-chat";
 import People from "./pages/people";
 import ChatRoom from "./pages/chat-room";
 import Tabs from "./routes/tabs";
+import Profile from "./pages/profile";
 
 const App: React.FC = () => (
   <IonApp>
     <IonReactRouter>
       <IonRouterOutlet>
-        <Route   path="/chat-room/:id" exact component={ChatRoom} ></Route>
-    <Route component={Tabs} path="/tab"></Route>
-        </IonRouterOutlet>
+        <Route path="/chat-room/:id" exact component={ChatRoom}></Route>
+        <Route component={Profile} path="/Profile" exact></Route>
+        <Route component={Tabs} path="/tab"></Route>
+      </IonRouterOutlet>
     </IonReactRouter>
   </IonApp>
 );
