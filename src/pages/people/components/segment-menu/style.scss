@@ -1,0 +1,23 @@
+.segment-menu {
+    text-align: center;
+    .segment {
+        border-radius: 14px;
+        padding-right: 50px;
+        padding-left: 50px;
+        background: white;
+        font-family: 'Source Sans Pro', sans-serif;
+        color: rgba(0, 0, 0, 0.5);
+        letter-spacing: -0.1px;
+        text-transform: uppercase;
+        font-weight: bold;
+        &.active {
+            background: rgba(0, 0, 0, 0.06);
+            color: #000000;
+            font-weight: 700;
+            line-height: 16px;
+
+            letter-spacing: -0.1px;
+            text-transform: uppercase;
+        }
+    }
+}

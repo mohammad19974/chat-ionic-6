@@ -1,0 +1,23 @@
+.stories {
+    border-radius: 10px;
+    height: 200px;
+    background-size: 100% 100%;
+    .avatar {
+        border: '1px sloid green';
+
+        width: 40px;
+        height: 40px;
+        position: relative;
+        left: 10px;
+        top: 10px;
+    }
+    .text-name {
+        position: absolute;
+        bottom: 10px;
+        left: 20px;
+        color: white;
+        font-family: 'Source Sans Pro', sans-serif;
+        font-size: 16px;
+        font-weight: 700;
+    }
+}
