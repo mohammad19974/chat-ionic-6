@@ -16,7 +16,14 @@ const People: React.FC = () => {
 
     return (
         <IonPage>
-            <HeaderMainPage routeLink="/profile" title="People" />
+            <HeaderMainPage
+                iconLast={
+                    process.env.PUBLIC_URL + '/assets/svg/add-content.svg'
+                }
+                iconEnd={process.env.PUBLIC_URL + '/assets/svg/Requests.svg'}
+                routeLink="/profile"
+                title="People"
+            />
             <SegmentMenu value={segment} onSelect={onChangeMenu} />
             <IonContent>
                 <ItemAddStory />

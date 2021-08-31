@@ -1,26 +1,33 @@
 .image-center {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  .image {
-    width: 115px;
-    height: 115px;
-    border-radius: 80px;
-    border: 1px solid rgba(228, 228, 228, 0.575);
-    filter: drop-shadow(0px 0px 1.5px rgba(110, 110, 110, 0.082));
-    margin-bottom: 14px;
-  }
-  .name {
-    font-family: "Source Sans Pro", sans-serif;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 24px;
-    line-height: 29px;
-    /* identical to box height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .image {
+        width: 115px;
+        height: 115px;
+        border-radius: 80px;
+        border: 1px solid rgba(228, 228, 228, 0.575);
+        filter: drop-shadow(0px 0px 1.5px rgba(110, 110, 110, 0.082));
+        margin-bottom: 14px;
+    }
+    .name {
+        font-family: 'Source Sans Pro', sans-serif;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 29px;
+        /* identical to box height */
 
-    text-align: center;
-    letter-spacing: 0.33px;
+        text-align: center;
+        letter-spacing: 0.33px;
 
-    color: #000000;
-  }
+        color: #000000;
+    }
+    .sub-title {
+        letter-spacing: -0.2px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 15px;
+        font-family: 'Source Sans Pro', sans-serif;
+        line-height: 18px;
+    }
 }
