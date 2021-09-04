@@ -3,12 +3,12 @@ export const StoriesList = [
         imageProfile: 'https://picsum.photos/100/100',
         active: false,
         lastLogin: '14 min ago',
-        name: 'dena ',
+        name: 'Karen Castillo ',
     },
     {
         imageProfile: 'https://picsum.photos/90/90',
         active: true,
-        name: 'fatma',
+        name: 'Maisy Humphrey',
     },
     {
         imageProfile: 'https://picsum.photos/65/65',
@@ -20,55 +20,55 @@ export const StoriesList = [
         imageProfile: 'https://picsum.photos/60/60',
         active: true,
         lastLogin: 'now',
-        name: 'mohammad',
+        name: 'Joshua Lawrence',
     },
     {
         imageProfile: 'https://picsum.photos/200/200',
         active: true,
         lastLogin: 'now',
-        name: 'ali',
+        name: 'Andrew Parker',
     },
     {
         imageProfile: 'https://picsum.photos/80/80',
         active: true,
         lastLogin: 'now',
-        name: 'maram',
+        name: 'Maram N',
     },
 ]
 
 export const STORIES_PROFILE = [
     {
-        name: 'mohammad jamel',
+        name: 'Karen Castillo',
         imageStore: 'https://picsum.photos/200/200',
         profileImage:
             'https://media.istockphoto.com/photos/beautiful-woman-turning-back-picture-id821889372?k=6&m=821889372&s=612x612&w=0&h=Po1YalyAJ94DVzJBxzwtLrjNLRJpM5e9wOfK1C5ox-U=',
     },
     {
-        name: 'ali jamel',
+        name: 'Maisy Humphrey',
         imageStore: 'https://picsum.photos/300/300',
         profileImage:
             'https://media.istockphoto.com/photos/beautiful-woman-turning-back-picture-id821889372?k=6&m=821889372&s=612x612&w=0&h=Po1YalyAJ94DVzJBxzwtLrjNLRJpM5e9wOfK1C5ox-U=',
     },
     {
-        name: 'ahmed jamel',
+        name: 'Joshua Lawrencel',
         imageStore: 'https://picsum.photos/150/150',
         profileImage:
             'https://media.istockphoto.com/photos/beautiful-woman-turning-back-picture-id821889372?k=6&m=821889372&s=612x612&w=0&h=Po1YalyAJ94DVzJBxzwtLrjNLRJpM5e9wOfK1C5ox-U=',
     },
     {
-        name: 'dena jamel',
+        name: 'Martin',
         imageStore: 'https://picsum.photos/250/250',
         profileImage:
             'https://media.istockphoto.com/photos/beautiful-woman-turning-back-picture-id821889372?k=6&m=821889372&s=612x612&w=0&h=Po1YalyAJ94DVzJBxzwtLrjNLRJpM5e9wOfK1C5ox-U=',
     },
     {
-        name: 'dena jamel',
+        name: 'Karen',
         imageStore: 'https://picsum.photos/280/280',
         profileImage:
             'https://media.istockphoto.com/photos/beautiful-woman-turning-back-picture-id821889372?k=6&m=821889372&s=612x612&w=0&h=Po1YalyAJ94DVzJBxzwtLrjNLRJpM5e9wOfK1C5ox-U=',
     },
     {
-        name: 'dena jamel',
+        name: 'Mohit Karekar',
         imageStore: 'https://picsum.photos/290/290',
         profileImage:
             'https://media.istockphoto.com/photos/beautiful-woman-turning-back-picture-id821889372?k=6&m=821889372&s=612x612&w=0&h=Po1YalyAJ94DVzJBxzwtLrjNLRJpM5e9wOfK1C5ox-U=',

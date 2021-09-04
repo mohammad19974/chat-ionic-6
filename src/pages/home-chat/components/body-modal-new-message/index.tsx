@@ -22,7 +22,7 @@ export const BodyModalNewMessage: React.FC<{
     <>
         <IonHeader className="ion-no-border">
             <IonToolbar>
-                <IonButtons onClick={onDismiss}>
+                <IonButtons slot="start" onClick={onDismiss}>
                     <IonButton>Cancel</IonButton>
                 </IonButtons>
                 <IonTitle>New message</IonTitle>
