@@ -19,6 +19,7 @@ export const HeaderMainPage: React.FC<HeaderMainPageProps> = ({
     routeLink,
     iconLast,
     iconEnd,
+    onClickEndIcon,
 }) => {
     const history = useHistory()
     return (
@@ -41,7 +42,7 @@ export const HeaderMainPage: React.FC<HeaderMainPageProps> = ({
                             ></ReactSVG>
                         </IonButton>
                     </IonButtons>
-                    <IonButtons>
+                    <IonButtons onClick={onClickEndIcon && onClickEndIcon}>
                         <IonButton style={{ height: '45px' }}>
                             <ReactSVG slot="icon-only" src={iconEnd}></ReactSVG>
                         </IonButton>

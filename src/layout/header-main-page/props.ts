@@ -3,4 +3,5 @@ export interface HeaderMainPageProps {
     routeLink: string
     iconEnd: string
     iconLast: string
+    onClickEndIcon?: () => void
 }

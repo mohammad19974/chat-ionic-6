@@ -9,6 +9,7 @@ import {
     IonItemSliding,
     IonList,
     IonPage,
+    useIonModal,
 } from '@ionic/react'
 
 import React from 'react'
@@ -18,11 +19,25 @@ import { HeaderMainPage } from '../../layout/header-main-page'
 import { itemChat, SLIDER_ITEM_OPTION } from '../../views/item-chat'
 import { StoriesList } from '../../views/stories'
 import { SearchBar } from '../../components/search-bar'
+import { BodyModalNewMessage } from './components/body-modal-new-message'
 
 const HomeChat: React.FC = () => {
+    const handleDismiss = () => {
+        dismiss()
+    }
+    const [present, dismiss] = useIonModal(BodyModalNewMessage, {
+        onDismiss: handleDismiss,
+    })
+
     return (
         <IonPage>
             <HeaderMainPage
+                onClickEndIcon={() =>
+                    present({
+                        swipeToClose: true,
+                        cssClass: 'my-class',
+                    })
+                }
                 iconLast={
                     process.env.PUBLIC_URL + '/assets/svg/Take-a-Photo.svg'
                 }
