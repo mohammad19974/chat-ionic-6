@@ -1,8 +1,9 @@
-import { IonContent, IonList, IonPage } from '@ionic/react'
+import { IonContent, IonList, IonPage, useIonModal } from '@ionic/react'
 import React, { useCallback, useState } from 'react'
 import { HeaderMainPage } from '../../layout/header-main-page'
 import { itemPeople } from '../../views/item-people'
 import { STORIES_PROFILE } from '../../views/stories'
+import { BodyModalStories } from '../home-chat/components/body-modal-stories'
 import { ItemAddStory } from './components/item-add-story'
 import { ItemPeople } from './components/item-people'
 import { SegmentMenu } from './components/segment-menu'
@@ -13,7 +14,12 @@ const People: React.FC = () => {
     const onChangeMenu = useCallback((value: string) => {
         setSegment(value)
     }, [])
-
+    const handleDismiss = () => {
+        dismiss()
+    }
+    const [present, dismiss] = useIonModal(BodyModalStories, {
+        onDismiss: handleDismiss,
+    })
     return (
         <IonPage>
             <HeaderMainPage
@@ -41,7 +47,15 @@ const People: React.FC = () => {
                         })}
                     </IonList>
                 ) : (
-                    <StoryGrid values={STORIES_PROFILE} />
+                    <StoryGrid
+                        onClickStories={() =>
+                            present({
+                                swipeToClose: true,
+                                cssClass: 'my-class',
+                            })
+                        }
+                        values={STORIES_PROFILE}
+                    />
                 )}
             </IonContent>
         </IonPage>

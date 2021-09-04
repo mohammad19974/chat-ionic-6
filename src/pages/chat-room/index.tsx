@@ -10,12 +10,14 @@ import {
     IonToolbar,
     useIonModal,
 } from '@ionic/react'
-import { sendSharp } from 'ionicons/icons'
+import { happyOutline, sendSharp } from 'ionicons/icons'
 import React, { useState } from 'react'
 import { CallBody } from '../../modal/call-modal'
 import BalonMe from './component/BalonMe'
 import BalonUser from './component/BalonUser'
 import { HeaderChat } from './component/header-chat'
+import Picker, { SKIN_TONE_MEDIUM_DARK } from 'emoji-picker-react'
+
 import './style.scss'
 const ChatRoom: React.FC = () => {
     const handleDismiss = () => {
@@ -26,6 +28,11 @@ const ChatRoom: React.FC = () => {
         onDismiss: handleDismiss,
         type: type,
     })
+    const [chosenEmoji, setChosenEmoji] = useState<string | null | any>('')
+    const [emoji, setEmoji] = useState(false)
+    const onEmojiClick = (event: any, emojiObject: any) => {
+        setChosenEmoji((preivew: any) => preivew?.concat(emojiObject.emoji))
+    }
 
     return (
         <IonPage id="chat-room">
@@ -55,12 +62,28 @@ const ChatRoom: React.FC = () => {
             </IonContent>
             <IonFooter>
                 <IonToolbar>
-                    <IonItem>
+                    <IonItem lines="none">
                         <IonInput
+                            onIonChange={(event) =>
+                                setChosenEmoji(event.detail.value!)
+                            }
+                            value={chosenEmoji}
                             className={'input-send-message'}
                             placeholder="messsage"
                         ></IonInput>
-                        <IonButtons slot="end">
+                        <IonButtons
+                            onClick={() => setEmoji((preivew) => !preivew)}
+                            style={{ margin: '0' }}
+                            slot="end"
+                        >
+                            <IonButton>
+                                <IonIcon
+                                    slot="icon-only"
+                                    icon={happyOutline}
+                                ></IonIcon>
+                            </IonButton>
+                        </IonButtons>
+                        <IonButtons style={{ margin: '0' }} slot="end">
                             <IonButton>
                                 <IonIcon
                                     slot="icon-only"
@@ -69,6 +92,17 @@ const ChatRoom: React.FC = () => {
                             </IonButton>
                         </IonButtons>
                     </IonItem>
+                    {emoji ? (
+                        <Picker
+                            pickerStyle={{ width: '100%' }}
+                            onEmojiClick={onEmojiClick}
+                            disableAutoFocus={false}
+                            skinTone={SKIN_TONE_MEDIUM_DARK}
+                            groupNames={{ smileys_people: 'PEOPLE' }}
+                        />
+                    ) : (
+                        ''
+                    )}
                 </IonToolbar>
             </IonFooter>
         </IonPage>

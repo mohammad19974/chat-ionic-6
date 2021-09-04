@@ -5,9 +5,11 @@ export const Story: React.FC<IValuesStoies> = ({
     imageStore,
     profileImage,
     name,
+    onClickStories,
 }) => {
     return (
         <div
+            onClick={onClickStories && onClickStories}
             className="stories"
             style={{ backgroundImage: `url(${imageStore})` }}
         >

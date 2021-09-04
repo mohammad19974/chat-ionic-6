@@ -24,6 +24,7 @@
     "@types/react-router": "^5.1.11",
     "@types/react-router-dom": "^5.1.7",
     "emoji-mart": "^3.0.1",
+    "emoji-picker-react": "^3.4.8",
     "i18next": "^20.4.0",
     "ionicons": "^5.4.0",
     "node-sass": "^6.0.1",
