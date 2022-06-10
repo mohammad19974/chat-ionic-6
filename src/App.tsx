@@ -1,5 +1,5 @@
 import { Redirect, Route } from 'react-router-dom'
-import { IonApp, IonRouterOutlet } from '@ionic/react'
+import { IonApp, IonRouterOutlet, setupIonicReact } from '@ionic/react'
 import { IonReactRouter } from '@ionic/react-router'
 
 /* Core CSS required for Ionic components to work properly */
@@ -23,7 +23,7 @@ import ChatRoom from './pages/chat-room'
 import Tabs from './routes/tabs'
 import Profile from './pages/profile'
 import { ProfileUser } from './pages/profile-user'
-
+setupIonicReact()
 const App: React.FC = () => (
     <IonApp>
         <IonReactRouter>
